@@ -23,5 +23,8 @@ $ redis-cli
 127.0.0.1:6379> DEL key [key ...]
 
 #### Создать запись other key с ключом another value на 20 секунд (EX 20)
-SET "other key" "another value" EX 20
+127.0.0.1:6379> SET "other key" "another value" EX 20
+
+#### Получает значение и удаляет запись
+127.0.0.1:6379> GETDEL key
 
