@@ -28,7 +28,9 @@ $ redis-cli --raw scan 0
 127.0.0.1:6379> info keyspace
 
 #### <ins>`Показать колличество ключей(всего) без входа в redis-cli.`</ins>
-$ redis-cli --scan | wc -l
+```dif
+- $ redis-cli --scan | wc -l
+```
 
 #### <ins>`Показать все ключи без входа в redis-cli.`</ins>
 $ redis-cli --scan
