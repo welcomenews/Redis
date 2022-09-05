@@ -16,6 +16,8 @@ $ redis-cli set key
 
 $ redis-cli keys "*"
 
+$ redis-cli --raw scan 0
+
 
 #### `Информация о сервевре`
 127.0.0.1:6379> info server
