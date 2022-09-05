@@ -7,6 +7,13 @@ $ sudo apt install redis -y
 $ redis-cli
 ```
 
+#### `Можно получать или вновить данные не заходя в redis-cli.
+$ redis-cli get key
+
+$ redis-cli set key
+$ redis-cli keys "*"
+
+
 #### `Информация о сервевре`
 127.0.0.1:6379> info server
 
