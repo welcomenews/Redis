@@ -33,7 +33,9 @@ $ redis-cli --raw scan 0
 ```
 
 #### <ins>`Показать все ключи без входа в redis-cli.`</ins>
-$ redis-cli --scan
+```diff
+- $ redis-cli --scan
+```
 
 #### `Создать запись first с ключом 1`
 127.0.0.1:6379> set first 1
