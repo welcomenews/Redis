@@ -7,10 +7,11 @@ $ sudo apt install redis -y
 $ redis-cli
 ```
 
-#### `Можно получать или вновить данные не заходя в redis-cli.
+#### `Можно получать или вновить данные не заходя в redis-cli.`
 $ redis-cli get key
 
 $ redis-cli set key
+
 $ redis-cli keys "*"
 
 
