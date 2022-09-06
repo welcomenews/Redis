@@ -143,6 +143,8 @@ LT - позволяют ввести условие относительно с�
 
 ---------------------------------------------------------
 
+https://redis.io/docs/clients/#python
+
 https://redis.io/commands/incrbyfloat/
 
 https://redis.io/commands/ttl/
