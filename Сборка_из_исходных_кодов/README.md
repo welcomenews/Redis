@@ -1,7 +1,7 @@
 ````
 apt update
 apt install -y curl build-essential     # без этого не обойдёмся
-apt install -y pkg-config               # опционально
+apt install -y pkg-config zip           # опционально
 apt install -y tk tcl                   # для тестирования после сборки
 
 # по указанной ссылке всегда актуальная версия и архив всегда распаковывается в однозначную папку;
