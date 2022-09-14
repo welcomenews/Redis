@@ -5,25 +5,34 @@
 
 import os
 import sys
+import redis
 
 def countBytes(): 
 
   fileAll = ""
+  filename = sys.argv[1]
 
-  with open(sys.argv[1], 'r', encoding='utf-8') as fp:
-    while True:
-      tmp100 = fp.read(100).replace('\n', "")
-      if tmp100 == "":
-          break
-      
-      if (sys.getsizeof(tmp100) > 99):
-          fileAll = ""
-      fileAll += tmp100
+  redis_client = redis.Redis(host = '127.0.0.1', port = 6379, decode_responses=True)
+  request = redis_client.get(filename)
 
-  byte100 = fileAll[-100:]
+  if(request):
 
-  print(byte100)
-#  print(sys.getsizeof(byte100))
-#  print(len(byte100.encode('utf-8')))
+    sys.stdout.write(request)
+
+  else:
+    with open(filename, 'r') as fp:
+      while True:
+        tmp100 = fp.read(100)
+        if tmp100 == "":
+            break
+        
+        if (sys.getsizeof(tmp100) > 130):
+            fileAll = ""
+        fileAll += tmp100
+
+    byte100 = fileAll[-100:]
+    redis_client.set(filename, byte100)
+
+    sys.stdout.write(byte100)
 
 countBytes()
