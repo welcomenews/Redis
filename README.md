@@ -303,6 +303,8 @@ LT - позволяют ввести условие относительно с�
 
 ---------------------------------------------------------
 
+http://onreader.mdl.ru/Redis4xCookbook/content/index.html#Preface
+
 https://redis.io/docs/clients/#python
 
 https://redis.io/commands/incrbyfloat/
