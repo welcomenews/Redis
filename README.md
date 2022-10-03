@@ -2,7 +2,7 @@
 
 ```
 ## Установка
-$ sudo apt install redis -y
+$ sudo apt install redis-server redis-tools -y
 ## Помощь
 $ redis-cli --help
 ## Вход
